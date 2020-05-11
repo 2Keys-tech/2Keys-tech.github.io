@@ -5,9 +5,40 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
+  /* background-color: #1B1B1D; */
+  background-color: #11090F;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, body, #root {
+	display: flex;
+	flex-grow: 1;
+	flex-shrink: 0;
+	align-self: stretch;
+	justify-self: stretch;
+	justify-content: stretch;
+	align-items: stretch;
+	height: 100%;
+	flex-direction: column;
+	user-select: none;
+	-moz-user-select: none;
+}
+
+*::-webkit-scrollbar {
+	width: 8px;
+	background: rgba(255, 255, 255, 0);
+	transition-duration: 300ms;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+*::-webkit-scrollbar-thumb:active {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+*::-webkit-scrollbar:hover {
+	/* width: 16px; */
+	background: rgba(255, 255, 255, 0.2);
 }
