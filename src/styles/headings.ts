@@ -13,6 +13,19 @@ export const headings = StyleSheet.create({
 		lineHeight: 1,
 		userSelect: "none",
 	},
+	
+	big: {
+		display: "flex",
+		flexGrow: 0,
+		margin: 0,
+		marginLeft: 32,
+		marginRight: "auto",
+		fontWeight: 600,
+		textTransform: "capitalize",
+		fontSize: 64,
+		lineHeight: 1,
+		userSelect: "none",
+	},
 
 	label: {
 		display: "flex",
