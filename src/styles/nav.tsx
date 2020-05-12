@@ -15,6 +15,7 @@ export const nav = StyleSheet.create({
 		paddingBottom: 16,
 		boxSizing: "border-box",
 		flexGrow: 1,
+		zIndex: 10,
 	},
 
 	link: {

@@ -19,6 +19,7 @@ export const headings = StyleSheet.create({
 		flexGrow: 0,
 		margin: 0,
 		marginRight: "auto",
+		marginBottom: 8,
 		fontWeight: 600,
 		textTransform: "capitalize",
 		fontSize: 48,
@@ -56,7 +57,7 @@ export const headings = StyleSheet.create({
 	},
 
 	big_label: {
-		display: "flex",
+		// display: "flex",
 		flexGrow: 0,
 		margin: 0,
 		fontWeight: 500,
