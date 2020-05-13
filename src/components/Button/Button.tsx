@@ -47,8 +47,9 @@ const Button: React.FunctionComponent<ButtonProps> = (props) => {
 				animationDelay: `${(props.index * 50) + 100}ms`,
 				animationDuration: "100ms",
 				...props.style
-			}}
-		>{props.children}</button>
+		}}>
+			<span>{props.children}</span>
+		</button>
 	);
 };
 

@@ -22,17 +22,20 @@ export const button = StyleSheet.create({
 		fontSize: 12,
 		fontWeight: 600,
 		minHeight: 24,
+		padding: "4px 8px",
 		
 		":hover": {
 			background: BACKGROUND_HOVER,
 			borderColor: OUTLINE_HOVER,
 			boxShadow: `0 0 1px ${OUTLINE_HOVER}, inset 0 0 1px ${OUTLINE_HOVER}`,
+			padding: "4px 8px",
 		},
-
+		
 		":active": {
 			background: BACKGROUND_FOCUS,
 			borderColor: OUTLINE_HOVER,
 			boxShadow: "none",
+			padding: "4px 8px",
 		},
 
 		":disabled": {

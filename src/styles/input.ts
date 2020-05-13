@@ -1,5 +1,5 @@
 import { StyleSheet } from "aphrodite/no-important";
-import { OUTLINE_STANDARD, BACKGROUND_STANDARD, BACKGROUND_FOCUS, OUTLINE_FOCUS } from "../util/theme";
+import { OUTLINE_STANDARD, BACKGROUND_STANDARD, BACKGROUND_FOCUS, OUTLINE_FOCUS, OUTLINE_HOVER } from "../util/theme";
 
 export const input = StyleSheet.create({
 	standard: {
@@ -38,8 +38,8 @@ export const input = StyleSheet.create({
 		
 		":focus": {
 			background: BACKGROUND_FOCUS,
-			borderColor: OUTLINE_FOCUS,
-			boxShadow: `0 0 1px ${OUTLINE_FOCUS}, inset 0 0 1px ${OUTLINE_FOCUS}`,
+			borderColor: OUTLINE_HOVER,
+			boxShadow: `0 0 1px ${OUTLINE_HOVER}, inset 0 0 1px ${OUTLINE_HOVER}`,
 		},
 
 		":disabled": {
