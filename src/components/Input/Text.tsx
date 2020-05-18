@@ -9,6 +9,7 @@ interface InputProps extends HTMLAttributes<HTMLInputElement> {
 	index?: number;
 	style?: React.CSSProperties;
 	type?: string;
+	name?: string;
 }
 
 // tslint:disable-next-line: typedef

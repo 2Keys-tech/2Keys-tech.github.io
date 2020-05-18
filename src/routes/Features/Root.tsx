@@ -12,6 +12,7 @@ import { staticDepth64 } from '../../styles/depth';
 import { Button } from '../../components/Button';
 import { TextInput } from '../../components/Input';
 
+
 const links = [
 	{
 		to: "/Simple/",
@@ -27,6 +28,7 @@ const links = [
 	},
 ]
 
+declare const window: Window & typeof globalThis & { hbspt: any };
 export class FeaturesRoot extends React.Component<RouteChildrenProps, {}> {
 	render = () => {
 		return (
@@ -49,17 +51,16 @@ export class FeaturesRoot extends React.Component<RouteChildrenProps, {}> {
 							<br/>
 							Turned up to 11.</h1>
 						<h3 className={css(headings.big_label)}>
-							We want to make macros AWESOME.
-							Make using macro cheap and easy with 2Keys.<br />
-							Any keyboard. Any macro.
+							2Keys makes it easy to use any number of keyboards for macros.<br />
+							Now you can have limitless shortcuts at your fingertips.
 							<br /><br />
-							Interested? Help us make the software&nbsp;<em>you</em>&nbsp;want by completing our survey, and sign up to our mailing list for more updates:
+							Interested? Help us make the software&nbsp;<em>you</em>&nbsp;want by completing our survey:
 						</h3>
-						<form onSubmit={(e) => e.preventDefault()}>
+						<form action="https://twokeystech.us18.list-manage.com/subscribe/post?u=6f3a86aca662c6524d97f9db4&amp;id=ea7025be99" method="post">
 							<FlexColumn style={{ marginBottom: "auto", marginTop: 16 }}>
 								<FlexRow style={{ maxHeight: 44, height: 44 }}>
 									<Button style={{ marginLeft: 0, marginRight: "auto" }}>Fill in the survey!</Button>
-									<TextInput style={{ width: 320 }} type="email" placeholder="someone@example.com" />
+									<TextInput style={{ width: 320 }} type="email" placeholder="someone@example.com" name="MERGE0" id="MERGE0"/>
 									<Button style={{ marginRight: 0 }}>Sign up for news</Button>
 								</FlexRow>
 								<h4 className={css(headings.desc)}>(e-mail address not required for completing survey)</h4>

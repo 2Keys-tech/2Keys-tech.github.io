@@ -46,3 +46,7 @@ html, body, #root {
 *[data-blur] {
 	backdrop-filter: blur(12px);
 }
+
+.hubspot2Keysform * {
+	color: #ffffff;
+}

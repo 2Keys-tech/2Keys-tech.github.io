@@ -62,7 +62,7 @@ export const headings = StyleSheet.create({
 		margin: 0,
 		fontWeight: 500,
 		fontSize: 20,
-		lineHeight: 1,
+		lineHeight: 1.25,
 	},
 
 	big_desc: {
