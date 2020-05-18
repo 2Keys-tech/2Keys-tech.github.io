@@ -39,7 +39,7 @@ export class FeaturesRoot extends React.Component<RouteChildrenProps, {}> {
 			// 	</List>
 			<FlexColumn grow maxHeight>
 				<Route path="/Features/" exact render={() => <Redirect to={`/Features/`} />} />
-				<FlexRow style={{ height: "100vh", flexShrink: 0, position: "relative" }}>
+				<FlexRow style={{ height: "100vh", flexShrink: 0, position: "relative", justifyContent: "space-around" }}>
 					<FlexRow style={{ position: "absolute", bottom: 0, width: "100%", height: 64, justifyContent: "center" }}>
 						<h3 className={css(headings.title, transitions.decelerate)}>Scroll down; There's more!</h3>
 					</FlexRow>
@@ -49,6 +49,7 @@ export class FeaturesRoot extends React.Component<RouteChildrenProps, {}> {
 							<br/>
 							Turned up to 11.</h1>
 						<h3 className={css(headings.big_label)}>
+							We want to make macros AWESOME.
 							Make using macro cheap and easy with 2Keys.<br />
 							Any keyboard. Any macro.
 							<br /><br />
@@ -61,11 +62,11 @@ export class FeaturesRoot extends React.Component<RouteChildrenProps, {}> {
 									<TextInput style={{ width: 320 }} type="email" placeholder="someone@example.com" />
 									<Button style={{ marginRight: 0 }}>Sign up for news</Button>
 								</FlexRow>
-								<h4 className={css(headings.label)}>(e-mail address not required for completing survey)</h4>
+								<h4 className={css(headings.desc)}>(e-mail address not required for completing survey)</h4>
 							</FlexColumn>
 						</form>
 					</FlexColumn>
-					<img src={require("../../assets/Twokeys Configure.png")} style={{ margin: "auto", display: "flex", ...staticDepth64, maxWidth: 512, maxHeight: 384 }} alt="Birds eye view of 2 keyboards + mouse" />
+					<img src={require("../../assets/AmpedUp11.png")} style={{ margin: "auto", marginLeft: 0, display: "flex", maxWidth: 800, maxHeight: 600 }} alt="Birds eye view of 2 keyboards + mouse" />
 				</FlexRow>
 				<FlexRow style={{ height: "50vh", minHeight: "50vh" }} reverse>
 					<FlexColumn style={{ margin: "auto", paddingLeft: 32, maxWidth: 720 }}>
