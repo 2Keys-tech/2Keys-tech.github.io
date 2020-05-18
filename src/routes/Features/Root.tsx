@@ -44,11 +44,16 @@ export class FeaturesRoot extends React.Component<RouteChildrenProps, {}> {
 						<h3 className={css(headings.title, transitions.decelerate)}>Scroll down; There's more!</h3>
 					</FlexRow>
 					<FlexColumn style={{ margin: "auto", paddingLeft: 32, paddingRight: 32, maxWidth: 720 }}>
-						<h1 className={css(headings.big, animations.decelerate, animations.fromLeft)} style={{ animationDelay: "200ms", marginBottom: 16, fontSize: 60 }}>Productivity.
+						<h1 className={css(headings.big, animations.decelerate, animations.fromLeft)} style={{ animationDelay: "200ms", marginBottom: 16, fontSize: 60 }}>
+							Productivity.
 							<br/>
-							Amped up to 11.</h1>
-						<h3 className={css(headings.big_label)}>We want to make macros AWESOME.
-						Help us make the software&nbsp;<em>you</em>&nbsp;want by completing our survey, and consider subscribing to our mailing list for updates</h3>
+							Turned up to 11.</h1>
+						<h3 className={css(headings.big_label)}>
+							Make using macro cheap and easy with 2Keys.<br />
+							Any keyboard. Any macro.
+							<br /><br />
+							Interested? Help us make the software&nbsp;<em>you</em>&nbsp;want by completing our survey, and sign up to our mailing list for more updates:
+						</h3>
 						<form onSubmit={(e) => e.preventDefault()}>
 							<FlexColumn style={{ marginBottom: "auto", marginTop: 16 }}>
 								<FlexRow style={{ maxHeight: 44, height: 44 }}>

@@ -41,7 +41,8 @@ class App extends React.Component<RouteChildrenProps, { scrollY: number, hideLog
 							<h1 className={css(special.logo, transitions.decelerate)} style={{ paddingLeft: 0, lineHeight: "56px", transform: `translateY(${this.state.hideLogo ? "-16" : 0}px)`, transitionDelay: "50ms" }}>2Keys Studio</h1>
 							<FlexRow>
 								<NavItem to="/Features/">Features</NavItem>
-								<NavItem to="/About/">Why</NavItem>
+								<NavItem to="#" disabled>More coming soon!</NavItem>
+								{ /* <NavItem to="/About/">Why</NavItem> */ }
 								{/* <NavItem to="/Company/">Company</NavItem> */}
 							</FlexRow>
 						</FlexColumn>
