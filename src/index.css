@@ -47,6 +47,11 @@ html, body, #root {
 	backdrop-filter: blur(12px);
 }
 
+/* Microsoft have rounded inputs by default in Edge.... WHY?!?!?! */
+input, button {
+	border-radius: 0;
+}
+
 .hubspot2Keysform * {
 	color: #ffffff;
 }
