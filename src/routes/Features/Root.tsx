@@ -46,7 +46,7 @@ export class FeaturesRoot extends React.Component<RouteChildrenProps, { gdprCons
 						</h3>
 						<form className={css(animations.decelerate, animations.fromLeft)} style={{ animationDelay: "500ms" }} action={"https://twokeystech.us18.list-manage.com/subscribe/post?u=6f3a86aca662c6524d97f9db4&id=ea7025be99"} onSubmit={this.state.gdprConsent ? null : (e) => e.preventDefault()} method="post">
 							<FlexColumn style={{ marginBottom: "auto", marginTop: 16 }}>
-								<FlexRow style={{ maxHeight: 48, height: 48 }}>
+								<FlexRow style={{ maxHeight: 46, height: 46 }}>
 									<Button onClick={() => window.open("https://forms.gle/ib45KECrqfFKjoSB6")} style={{ marginLeft: 0, marginRight: "auto" }}>Fill in the survey!</Button>
 									<TextInput style={{ width: 320 }} type="email" placeholder="someone@example.com" name="MERGE0" id="MERGE0"/>
 									<Button style={{ marginRight: 0 }}>Sign up for news</Button>
