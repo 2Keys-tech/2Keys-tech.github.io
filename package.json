@@ -1,5 +1,6 @@
 {
   "name": "twokeys-showcase",
+  "description": "Site for 2Keys",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
