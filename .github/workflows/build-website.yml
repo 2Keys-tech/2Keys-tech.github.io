@@ -28,6 +28,8 @@ jobs:
       run: |
         mkdir repo
         cd repo
+        echo Cloning repo...
+        git clone https://github.com/$GITHUB_REPOSITORY --branch master ./
         echo Deleteing dirs...
         find . ! -wholename './.git/*' ! -wholename './.git' ! -wholename '.' -type d -exec rm -rfv {} +
         echo Deleteing files...
@@ -49,6 +51,7 @@ jobs:
       run: cp -va ./build/. /repo/
     - name: Commit changes
       run: |
+        cd repo
         git add .
         git commit -m "Build push for commit $GITHUB_SHA run ID $GITHUB_RUN_ID"
     - name: GitHub Push
