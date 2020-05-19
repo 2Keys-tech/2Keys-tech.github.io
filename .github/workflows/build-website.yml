@@ -36,6 +36,8 @@ jobs:
         find . ! -wholename './.git/*' -type f -exec echo {} +
         echo Staging...
         git add .
+        echo Adding a CNAME files..
+        echo "twokeystech.com" > CNAME
     - run: yarn
     - run: yarn run build
       env:
