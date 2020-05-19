@@ -1,51 +1,38 @@
 import React from 'react';
 
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import type { RouteChildrenProps } from 'react-router-dom';
 
 import { FlexColumn, FlexRow, Section } from '../../components/layout';
-import { List } from '../../components/List';
-import ListLink from '../../components/Button/Text';
 import { css } from 'aphrodite/no-important';
 import { headings, animations, transitions } from '../../styles';
 import { staticDepth64 } from '../../styles/depth';
 import { Button } from '../../components/Button';
 import { TextInput } from '../../components/Input';
 
-
-const links = [
-	{
-		to: "/Simple/",
-		display: "Simple to use",
-	},
-	{
-		to: "/Streamlined/",
-		display: "Streamlined",
-	},
-	{
-		to: "/Powerful/",
-		display: "Powerful",
-	},
-]
-
 declare const window: Window & typeof globalThis & { hbspt: any };
-export class FeaturesRoot extends React.Component<RouteChildrenProps, {}> {
+export class FeaturesRoot extends React.Component<RouteChildrenProps, { gdprConsent: boolean }> {
+	constructor(props: RouteChildrenProps) {
+		super(props);
+		this.state = {
+			gdprConsent: false,
+		}
+	}
 	render = () => {
-		return (
-			// <List>
-			// 	<FlexColumn style={{ justifyContent: "center", justifyItems: "center" }} maxHeight>
-			// 	{links.map((link, i) => (
-			// 		<ListLink index={i} to={`/Features${link.to}`}>{link.display}</ListLink>
-			// 		))}
-			// 		</FlexColumn>
-			// 	</List>
+		const notFinishedYet = true;
+		if (notFinishedYet === true) return (
 			<FlexColumn grow maxHeight>
-				<Route path="/Features/" exact render={() => <Redirect to={`/Features/`} />} />
+				{/* <Route path="/Features/" exact render={() => <Redirect to={`/Features/`} />} /> */}
 				<FlexRow style={{ height: "100vh", flexShrink: 0, position: "relative", justifyContent: "space-around" }}>
-					<FlexRow style={{ position: "absolute", bottom: 0, width: "100%", height: 64, justifyContent: "center" }}>
+					{/* <FlexRow style={{ position: "absolute", bottom: 0, width: "100%", height: 64, justifyContent: "center" }}>
 						<h3 className={css(headings.title, transitions.decelerate)}>Scroll down; There's more!</h3>
+					</FlexRow> */}
+					{/* When there is more content for the site, comment the FlexRow underneath this note, and uncomment the one above */}
+					<FlexRow style={{ position: "absolute", bottom: 0, width: "100%", height: 64, justifyContent: "center" }}>
+						<h3 className={css(headings.title, transitions.decelerate)}>We're working on the site and getting screenshots and more ready!</h3>
+						{process.env.NODE_ENV === "development" ? <h3>GDPR Consent? {this.state.gdprConsent.toString()}</h3> : null}
 					</FlexRow>
-					<FlexColumn style={{ margin: "auto", paddingLeft: 32, paddingRight: 32, maxWidth: 720 }}>
+					<FlexColumn style={{ margin: "auto", marginRight: 0, paddingLeft: 32, paddingRight: 32, maxWidth: 800, width: 800 }}>
 						<h1 className={css(headings.big, animations.decelerate, animations.fromLeft)} style={{ animationDelay: "200ms", marginBottom: 16, fontSize: 60 }}>
 							Productivity.
 							<br/>
@@ -56,12 +43,22 @@ export class FeaturesRoot extends React.Component<RouteChildrenProps, {}> {
 							<br /><br />
 							Interested? Help us make the software&nbsp;<em>you</em>&nbsp;want by completing our survey:
 						</h3>
-						<form action="https://twokeystech.us18.list-manage.com/subscribe/post?u=6f3a86aca662c6524d97f9db4&amp;id=ea7025be99" method="post">
+						<form action={"https://twokeystech.us18.list-manage.com/subscribe/post?u=6f3a86aca662c6524d97f9db4&id=ea7025be99"} onSubmit={this.state.gdprConsent ? null : (e) => e.preventDefault()} method="post">
 							<FlexColumn style={{ marginBottom: "auto", marginTop: 16 }}>
-								<FlexRow style={{ maxHeight: 44, height: 44 }}>
+								<FlexRow style={{ maxHeight: 48, height: 48 }}>
 									<Button style={{ marginLeft: 0, marginRight: "auto" }}>Fill in the survey!</Button>
 									<TextInput style={{ width: 320 }} type="email" placeholder="someone@example.com" name="MERGE0" id="MERGE0"/>
 									<Button style={{ marginRight: 0 }}>Sign up for news</Button>
+								</FlexRow>
+								<FlexRow>
+									<input
+										checked={this.state.gdprConsent}
+										onChange={(e) => this.setState({ gdprConsent: e.currentTarget.checked })}
+										style={{ margin: "auto 4px auto 0" }}
+										required // this is how we handle enforcing people consent!
+										type="checkbox"
+										id="GDPR-consent-checkbox" />
+									<label htmlFor="GDPR-consent-checkbox" className={css(headings.desc)}>Do you provide explicit consent for us to contact you in regards to updates and announcements about 2Keys Studio</label>
 								</FlexRow>
 								<h4 className={css(headings.desc)}>(e-mail address not required for completing survey)</h4>
 							</FlexColumn>
@@ -69,6 +66,10 @@ export class FeaturesRoot extends React.Component<RouteChildrenProps, {}> {
 					</FlexColumn>
 					<img src={require("../../assets/AmpedUp11.png")} style={{ margin: "auto", marginLeft: 0, display: "flex", maxWidth: 800, maxHeight: 600 }} alt="Birds eye view of 2 keyboards + mouse" />
 				</FlexRow>
+			</FlexColumn>
+		);
+		if (!notFinishedYet) return (
+			<FlexColumn>
 				<FlexRow style={{ height: "50vh", minHeight: "50vh" }} reverse>
 					<FlexColumn style={{ margin: "auto", paddingLeft: 32, maxWidth: 720 }}>
 						<h1 className={css(headings.big, animations.decelerate, animations.fromLeft)} style={{ animationDelay: "300ms" }}>Simple to use</h1>
