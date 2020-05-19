@@ -55,3 +55,8 @@ input, button {
 .hubspot2Keysform * {
 	color: #ffffff;
 }
+
+.consent-checkbox:not(output):-moz-ui-invalid, .consent-checkbox:invalid {
+	box-shadow: none;
+	outline: 1px red solid;
+}
