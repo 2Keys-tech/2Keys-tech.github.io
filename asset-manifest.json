@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9ffd4853.chunk.css",
+    "main.js": "/static/js/main.dc961afa.chunk.js",
+    "main.js.map": "/static/js/main.dc961afa.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2414768d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2414768d.js.map",
+    "static/js/2.3aa564ff.chunk.js": "/static/js/2.3aa564ff.chunk.js",
+    "static/js/2.3aa564ff.chunk.js.map": "/static/js/2.3aa564ff.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.8f45f0e721d01b10555d1fa9779e642b.js": "/precache-manifest.8f45f0e721d01b10555d1fa9779e642b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.9ffd4853.chunk.css.map": "/static/css/main.9ffd4853.chunk.css.map",
+    "static/js/2.3aa564ff.chunk.js.LICENSE.txt": "/static/js/2.3aa564ff.chunk.js.LICENSE.txt",
+    "static/media/AmpedUp11.png": "/static/media/AmpedUp11.9cdd57c1.png",
+    "static/media/Twokeys Configure.png": "/static/media/Twokeys Configure.904723ce.png",
+    "static/media/Twokeys Project Settings.png": "/static/media/Twokeys Project Settings.e3a3d47a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2414768d.js",
+    "static/js/2.3aa564ff.chunk.js",
+    "static/css/main.9ffd4853.chunk.css",
+    "static/js/main.dc961afa.chunk.js"
+  ]
+}
