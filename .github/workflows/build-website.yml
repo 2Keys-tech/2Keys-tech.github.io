@@ -52,6 +52,9 @@ jobs:
     - name: Commit changes
       run: |
         cd repo
+        echo Setting git settings
+        git config user.email "contact@twokeystech.com"
+        git config user.name "2Keys Website Build Action"
         git add .
         git commit -m "Build push for commit $GITHUB_SHA run ID $GITHUB_RUN_ID"
     - name: GitHub Push
