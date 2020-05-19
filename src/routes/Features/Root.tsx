@@ -57,6 +57,7 @@ export class FeaturesRoot extends React.Component<RouteChildrenProps, { gdprCons
 										onChange={(e) => this.setState({ gdprConsent: e.currentTarget.checked })}
 										style={{ margin: "auto 4px auto 0" }}
 										required // this is how we handle enforcing people consent!
+										className="consent-checkbox"
 										type="checkbox"
 										id="GDPR-consent-checkbox" />
 									<label htmlFor="GDPR-consent-checkbox" className={css(headings.desc)}>Do you give consent for us to use the data you give us to contact you about 2Keys Studio?</label>
