@@ -19,8 +19,8 @@ export const button = StyleSheet.create({
 		margin: 8,
 		textTransform: "uppercase",
 		font: "inherit",
-		fontSize: 12,
-		fontWeight: 600,
+		fontSize: 14,
+		fontWeight: 500,
 		minHeight: 24,
 		padding: "4px 8px",
 		
