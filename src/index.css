@@ -61,6 +61,6 @@ input, button {
 }
 
 .consent-checkbox:not(output):-moz-ui-invalid, .consent-checkbox:invalid {
-	box-shadow: none;
-	outline: 1px red solid;
+	box-shadow: 0 0 0 1px red;
+	/* outline: 1px red solid; */
 }
