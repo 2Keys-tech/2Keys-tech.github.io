@@ -30,7 +30,6 @@ export class FeaturesRoot extends React.Component<RouteChildrenProps, { gdprCons
 					{/* When there is more content for the site, comment the FlexRow underneath this note, and uncomment the one above */}
 					<FlexRow style={{ position: "absolute", bottom: 0, width: "100%", height: 64, justifyContent: "center" }}>
 						<h3 className={css(headings.title, transitions.decelerate)}>We're working on the site and getting screenshots and more ready!</h3>
-						{process.env.NODE_ENV === "development" ? <h3>GDPR Consent? {this.state.gdprConsent.toString()}</h3> : null}
 					</FlexRow>
 					<FlexColumn style={{ margin: "auto", marginRight: 0, paddingLeft: 32, paddingRight: 32, maxWidth: 800, width: 800 }}>
 						<h1 className={css(headings.big, animations.decelerate, animations.fromLeft)} style={{ animationDelay: "200ms", marginBottom: 16, fontSize: 60 }}>
