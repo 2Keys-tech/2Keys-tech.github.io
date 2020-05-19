@@ -60,7 +60,7 @@ export class FeaturesRoot extends React.Component<RouteChildrenProps, { gdprCons
 										className="consent-checkbox"
 										type="checkbox"
 										id="GDPR-consent-checkbox" />
-									<label htmlFor="GDPR-consent-checkbox" className={css(headings.desc)}>Do you give consent for us to use the data you give us to contact you about 2Keys Studio?</label>
+									<label htmlFor="GDPR-consent-checkbox" className={css(headings.desc)}>I consent to my email being used to contact me about 2Keys Studio</label>
 								</FlexRow>
 								{/* <h4 className={css(headings.desc)}>(e-mail address not required for completing survey)</h4> */}
 							</FlexColumn>
