@@ -36,20 +36,22 @@ export class FeaturesRoot extends React.Component<RouteChildrenProps, { gdprCons
 							Productivity.
 							<br/>
 							Turned up to 11.</h1>
-						<h3 className={css(headings.big_label)}>
+						<h3 className={css(headings.big_label, animations.decelerate, animations.fromLeft)} style={{ animationDelay: "300ms" }}>
 							2Keys makes it easy to use any number of keyboards for macros.<br />
 							Now you can have limitless shortcuts at your fingertips.
-							<br /><br />
+						</h3>
+						<br />
+						<h3 className={css(headings.big_label, animations.decelerate, animations.fromLeft)} style={{ animationDelay: "400ms" }}>
 							Interested? Help us make the software&nbsp;<em>you</em>&nbsp;want by completing our survey:
 						</h3>
-						<form action={"https://twokeystech.us18.list-manage.com/subscribe/post?u=6f3a86aca662c6524d97f9db4&id=ea7025be99"} onSubmit={this.state.gdprConsent ? null : (e) => e.preventDefault()} method="post">
+						<form className={css(animations.decelerate, animations.fromLeft)} style={{ animationDelay: "500ms" }} action={"https://twokeystech.us18.list-manage.com/subscribe/post?u=6f3a86aca662c6524d97f9db4&id=ea7025be99"} onSubmit={this.state.gdprConsent ? null : (e) => e.preventDefault()} method="post">
 							<FlexColumn style={{ marginBottom: "auto", marginTop: 16 }}>
 								<FlexRow style={{ maxHeight: 48, height: 48 }}>
 									<Button onClick={() => window.open("https://forms.gle/ib45KECrqfFKjoSB6")} style={{ marginLeft: 0, marginRight: "auto" }}>Fill in the survey!</Button>
 									<TextInput style={{ width: 320 }} type="email" placeholder="someone@example.com" name="MERGE0" id="MERGE0"/>
 									<Button style={{ marginRight: 0 }}>Sign up for news</Button>
 								</FlexRow>
-								<FlexRow>
+								<FlexRow className={[animations.decelerate, animations.fromLeft]} style={{ animationDelay: "800ms", animationDuration: "400ms" }}>
 									<input
 										checked={this.state.gdprConsent}
 										onChange={(e) => this.setState({ gdprConsent: e.currentTarget.checked })}
@@ -57,13 +59,13 @@ export class FeaturesRoot extends React.Component<RouteChildrenProps, { gdprCons
 										required // this is how we handle enforcing people consent!
 										type="checkbox"
 										id="GDPR-consent-checkbox" />
-									<label htmlFor="GDPR-consent-checkbox" className={css(headings.desc)}>Do you provide explicit consent for us to contact you in regards to updates and announcements about 2Keys Studio</label>
+									<label htmlFor="GDPR-consent-checkbox" className={css(headings.desc)}>Do you give consent for us to use the data you give us to contact you about 2Keys Studio?</label>
 								</FlexRow>
-								<h4 className={css(headings.desc)}>(e-mail address not required for completing survey)</h4>
+								{/* <h4 className={css(headings.desc)}>(e-mail address not required for completing survey)</h4> */}
 							</FlexColumn>
 						</form>
 					</FlexColumn>
-					<img src={require("../../assets/AmpedUp11.png")} style={{ margin: "auto", marginLeft: 0, display: "flex", maxWidth: 800, maxHeight: 600 }} alt="Birds eye view of 2 keyboards + mouse" />
+					<img className={css(animations.decelerate, animations.fromLeft)} src={require("../../assets/AmpedUp11.png")} style={{ margin: "auto", marginLeft: 0, display: "flex", maxWidth: 800, maxHeight: 600, animationDelay: "400ms", animationDuration: "1200ms" }} alt="Birds eye view of 2 keyboards + mouse" />
 				</FlexRow>
 			</FlexColumn>
 		);
