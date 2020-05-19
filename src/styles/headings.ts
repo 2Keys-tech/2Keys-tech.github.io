@@ -25,6 +25,8 @@ export const headings = StyleSheet.create({
 		fontSize: 48,
 		lineHeight: 1,
 		userSelect: "none",
+		wordBreak: "break-word",
+		hyphens: "manual",
 	},
 
 	label: {
