@@ -70,7 +70,7 @@ export class FeaturesRoot extends React.Component<RouteChildrenProps, { gdprCons
 							</FlexColumn>
 						</form>
 					</FlexColumn>
-					<img className={css(animations.decelerate, animations.fromLeft)} src={require("../../assets/AmpedUp11.png")} style={{ margin: "auto", marginLeft: 0, display: this.state.mobile ? "none" : "flex", maxWidth: 800, maxHeight: 600, animationDelay: "400ms", animationDuration: "1200ms" }} alt="Birds eye view of 2 keyboards + mouse" />
+					<img className={css(animations.decelerate, animations.fromLeft)} src={require("../../assets/AmpedUp11New.png")} style={{ margin: "auto", marginLeft: 0, display: this.state.mobile ? "none" : "flex", maxWidth: 800, maxHeight: 600, animationDelay: "400ms", animationDuration: "1200ms" }} alt="Birds eye view of 2 keyboards + mouse" />
 					{/* <FlexRow style={{ position: "absolute", bottom: 0, width: "100%", height: 64, justifyContent: "center" }}>
 						<h3 className={css(headings.title, transitions.decelerate)}>Scroll down; There's more!</h3>
 					</FlexRow> */}
